@@ -1,0 +1,187 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+
+	<style type="text/css"> 
+/*@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Permanent+Marker');*/
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Monoton|Permanent+Marker|Teko');
+
+
+		@import "compass";
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #202030;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+$color-background: #181818;
+$color-item-background: #282828;
+$color-type: #fefefe;
+$thumb-side: 240px;
+$item-height: 360px;
+
+@mixin center-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.artist {
+  width: $thumb-side;
+  height: $item-height;
+  margin-right: 10px;
+  background: $color-item-background;
+  &:last-child {
+    margin: 0;
+  }
+}
+  &__thumbnail {
+    position: relative;
+    width: $thumb-side;
+    height: $thumb-side;
+    overflow: hidden;
+      padding: 30px;
+    }
+  &__blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(40px);
+    z-index: 1;
+    }
+  &__image {
+    width: ($thumb-side / 2);
+    height: ($thumb-side / 2);;
+    border-radius: 30%;
+    z-index: 3;
+    resize: 50%;
+            padding: 30px;
+
+    @include center-center;
+  }
+    
+    
+
+  &__ring {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, .2) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(255, 255, 255, .2) 100%);
+    z-index: 2;
+    box-shadow: 4px 0 2px -4px rgba(255, 255, 255, .9), -4px 0 2px -4px rgba(255, 255, 255, .9);
+    @include center-center;
+    &--outer {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  &__label {
+    display: flex;
+    height: ($item-height - $thumb-side);
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 10px;
+  }
+
+.capital {
+  color: darken($color-type, 50);
+  text-transform: uppercase;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  @extend html;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color-background;
+  color: $color-type;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//custom mixins
+@mixin transformSkewScale($x, $y){
+    -webkit-transform: skew($x) scaleX($y);
+    -ms-transform: skew($x) scaleX($y);
+    transform: skew($x) scaleX($y);
+}
+html{background:  beige;}
+h1{font-family: Monoton;
+    
+color: black;
+    margin-left: 100px;
+    margin-right: right;
+    padding: 50px;
+}
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    font-family: sans-serif;
+}
+
+.sidenav a:hover {
+    color: coral;
+}
+p{font-family: sans-serif;
+width: 500px;
+position: right;}
+
